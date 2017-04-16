@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="LagoVista.ContentManager.App.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LagoVista.ContentManager.App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <CommandBar>
+            <AppBarToggleButton Icon="Save" Click="AppBarToggleButton_Click" />
+        </CommandBar>
+        <StackPanel Grid.Row="1" Margin="4">
+            <TextBlock Text="Account Name"  />
+            <TextBox Text="{Binding AccountName, Mode=TwoWay}" x:Name="StorageName" />
+            <TextBlock Text="Account Key"  />
+            <TextBox Text="{Binding AccountKey, Mode=TwoWay}" x:Name="StorageKey" />
+        </StackPanel>
+    </Grid>
+</Page>
